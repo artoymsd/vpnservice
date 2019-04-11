@@ -10,6 +10,10 @@
 		9467291522005CCD00CBAFA3 /* VPNService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9467290B22005CCD00CBAFA3 /* VPNService.framework */; };
 		9467291A22005CCD00CBAFA3 /* VPNServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467291922005CCD00CBAFA3 /* VPNServiceTests.swift */; };
 		9467291C22005CCD00CBAFA3 /* VPNService.h in Headers */ = {isa = PBXBuildFile; fileRef = 9467290E22005CCD00CBAFA3 /* VPNService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9467292922005CF000CBAFA3 /* IVPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467292522005CF000CBAFA3 /* IVPNService.swift */; };
+		9467292A22005CF000CBAFA3 /* VPNConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467292622005CF000CBAFA3 /* VPNConfig.swift */; };
+		9467292B22005CF000CBAFA3 /* VPNServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467292722005CF000CBAFA3 /* VPNServiceDelegate.swift */; };
+		9467292C22005CF000CBAFA3 /* VPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467292822005CF000CBAFA3 /* VPNService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		9467291422005CCD00CBAFA3 /* VPNServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPNServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9467291922005CCD00CBAFA3 /* VPNServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNServiceTests.swift; sourceTree = "<group>"; };
 		9467291B22005CCD00CBAFA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9467292522005CF000CBAFA3 /* IVPNService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IVPNService.swift; sourceTree = "<group>"; };
+		9467292622005CF000CBAFA3 /* VPNConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNConfig.swift; sourceTree = "<group>"; };
+		9467292722005CF000CBAFA3 /* VPNServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNServiceDelegate.swift; sourceTree = "<group>"; };
+		9467292822005CF000CBAFA3 /* VPNService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,10 @@
 		9467290D22005CCD00CBAFA3 /* VPNService */ = {
 			isa = PBXGroup;
 			children = (
+				9467292522005CF000CBAFA3 /* IVPNService.swift */,
+				9467292622005CF000CBAFA3 /* VPNConfig.swift */,
+				9467292822005CF000CBAFA3 /* VPNService.swift */,
+				9467292722005CF000CBAFA3 /* VPNServiceDelegate.swift */,
 				9467290E22005CCD00CBAFA3 /* VPNService.h */,
 				9467290F22005CCD00CBAFA3 /* Info.plist */,
 			);
@@ -148,6 +160,7 @@
 				TargetAttributes = {
 					9467290A22005CCD00CBAFA3 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					9467291322005CCD00CBAFA3 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9467292C22005CF000CBAFA3 /* VPNService.swift in Sources */,
+				9467292A22005CF000CBAFA3 /* VPNConfig.swift in Sources */,
+				9467292B22005CF000CBAFA3 /* VPNServiceDelegate.swift in Sources */,
+				9467292922005CF000CBAFA3 /* IVPNService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -326,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -341,6 +358,7 @@
 		9467292022005CCD00CBAFA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -350,6 +368,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = VPNService/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +377,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vpn.VPNService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -366,6 +386,7 @@
 		9467292122005CCD00CBAFA3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -375,6 +396,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = VPNService/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,7 +405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vpn.VPNService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -391,6 +413,7 @@
 		9467292322005CCD00CBAFA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UFDRB2R4CS;
 				INFOPLIST_FILE = VPNServiceTests/Info.plist;
@@ -409,6 +432,7 @@
 		9467292422005CCD00CBAFA3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UFDRB2R4CS;
 				INFOPLIST_FILE = VPNServiceTests/Info.plist;
