@@ -9,15 +9,15 @@
 import Foundation
 
 public protocol VPNServiceDelegate: class {
-    func connecting()
-    func connected()
-    func disconnecting()
-    func disconnected()
-    func reasserting()
-    func invalid()
+  func connecting()
+  func connected()
+  func disconnecting()
+  func disconnected()
+  func reasserting()
+  func invalid()
 }
 
 extension VPNServiceDelegate {
-    func reasserting() {}
-    func invalid() {}
+  func reasserting() {}
+  func invalid() {}
 }

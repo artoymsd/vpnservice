@@ -10,14 +10,14 @@ import Foundation
 import NetworkExtension
 
 public protocol IVPNService: class {
-    
-    var delegate: VPNServiceDelegate? { get set }
-    var currentVPNState: NEVPNStatus { get }
-    
-    func connect(vpnConfig: VPNConfig, completion: @escaping(Error?) -> Void)
-    func disconnect()
-    
-    func removeProfile(completion: @escaping (Error?) -> Void)
-    func vpnProtocol(completion: @escaping (NEVPNProtocol?) -> Void)
-    
+  
+  var delegate: VPNServiceDelegate? { get set }
+  var currentVPNState: NEVPNStatus { get }
+  
+  func connect(vpnConfig: VPNConfig, completion: @escaping(Error?) -> Void)
+  func disconnect()
+  
+  func removeProfile(completion: @escaping (Error?) -> Void)
+  func vpnProtocol(completion: @escaping (NEVPNProtocol?) -> Void)
+  
 }
