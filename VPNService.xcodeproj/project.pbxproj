@@ -14,6 +14,7 @@
 		9467292A22005CF000CBAFA3 /* VPNConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467292622005CF000CBAFA3 /* VPNConfig.swift */; };
 		9467292B22005CF000CBAFA3 /* VPNServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467292722005CF000CBAFA3 /* VPNServiceDelegate.swift */; };
 		9467292C22005CF000CBAFA3 /* VPNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9467292822005CF000CBAFA3 /* VPNService.swift */; };
+		94F6058C23478B7D002693B7 /* VPNService.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 94F6058B23478B7D002693B7 /* VPNService.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		9467292622005CF000CBAFA3 /* VPNConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNConfig.swift; sourceTree = "<group>"; };
 		9467292722005CF000CBAFA3 /* VPNServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNServiceDelegate.swift; sourceTree = "<group>"; };
 		9467292822005CF000CBAFA3 /* VPNService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VPNService.swift; sourceTree = "<group>"; };
+		94F6058B23478B7D002693B7 /* VPNService.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VPNService.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		9467290122005CCD00CBAFA3 = {
 			isa = PBXGroup;
 			children = (
+				94F6058B23478B7D002693B7 /* VPNService.podspec */,
 				9467290D22005CCD00CBAFA3 /* VPNService */,
 				9467291822005CCD00CBAFA3 /* VPNServiceTests */,
 				9467290C22005CCD00CBAFA3 /* Products */,
@@ -190,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F6058C23478B7D002693B7 /* VPNService.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

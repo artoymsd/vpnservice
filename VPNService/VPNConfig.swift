@@ -1,6 +1,5 @@
 //
 //  VPNConfig.swift
-//  StarVPN-New
 //
 //  Created by Artem Sidorenko on 18/01/2019.
 //  Copyright © 2019 Artem Sidorenko. All rights reserved.
@@ -23,5 +22,4 @@ public struct VPNConfig {
     self.groupName = groupName
     self.sharedSecret = sharedSecret
   }
-  
 }

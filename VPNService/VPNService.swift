@@ -1,6 +1,5 @@
 //
 //  VPNService.swift
-//  StarVPN-New
 //
 //  Created by Artem Sidorenko on 18/01/2019.
 //  Copyright © 2019 Artem Sidorenko. All rights reserved.
@@ -97,10 +96,12 @@ public final class VPNService: IVPNService {
     case .connected:
       let connectRule = NEOnDemandRuleConnect()
       connectRule.interfaceTypeMatch = .any
+      
       self.vpnManager.onDemandRules = [connectRule]
       self.vpnManager.isOnDemandEnabled = true
       self.vpnManager.isEnabled = true
       self.vpnManager.saveToPreferences { _ in}
+      
       delegate?.connected()
       
     case .disconnecting:
@@ -122,13 +123,15 @@ public final class VPNService: IVPNService {
   
   fileprivate func saveVPNPreference(vpnConfig: VPNConfig, completion: @escaping(Error?) -> Void) {
     let newProtocol = NEVPNProtocolIPSec()
-    newProtocol.serverAddress = vpnConfig.serverAddress
-    newProtocol.authenticationMethod = NEVPNIKEAuthenticationMethod.sharedSecret
-    newProtocol.sharedSecretReference = vpnConfig.sharedSecret
-    newProtocol.username = vpnConfig.username
-    newProtocol.passwordReference = vpnConfig.password
+    
+    newProtocol.serverAddress             = vpnConfig.serverAddress
+    newProtocol.authenticationMethod      = NEVPNIKEAuthenticationMethod.sharedSecret
+    newProtocol.sharedSecretReference     = vpnConfig.sharedSecret
+    newProtocol.username                  = vpnConfig.username
+    newProtocol.passwordReference         = vpnConfig.password
     newProtocol.useExtendedAuthentication = true
-    newProtocol.disconnectOnSleep = false
+    newProtocol.disconnectOnSleep         = false
+    
     self.vpnManager.protocolConfiguration = newProtocol
     self.vpnManager.isEnabled = true
     self.vpnManager.saveToPreferences { error in

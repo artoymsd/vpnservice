@@ -1,6 +1,5 @@
 //
 //  IVPNService.swift
-//  StarVPN-New
 //
 //  Created by Artem Sidorenko on 18/01/2019.
 //  Copyright © 2019 Artem Sidorenko. All rights reserved.
@@ -19,5 +18,4 @@ public protocol IVPNService: class {
   
   func removeProfile(completion: @escaping (Error?) -> Void)
   func vpnProtocol(completion: @escaping (NEVPNProtocol?) -> Void)
-  
 }
