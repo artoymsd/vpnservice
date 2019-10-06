@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
 
   spec.homepage     = "https://github.com/artoymsd/vpnservice"
 
-  spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
   spec.author       = { "Artem Sidorenko" => "artoymsd@gmail.com" }
 
