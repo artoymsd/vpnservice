@@ -14,7 +14,7 @@ public protocol IVPNService: class {
   var currentVPNState: NEVPNStatus { get }
   
   func connect(vpnConfig: VPNConfig, completion: @escaping(Error?) -> Void)
-  func disconnect()
+  func disconnect(completion: @escaping(Error?) -> Void)
   
   func removeProfile(completion: @escaping (Error?) -> Void)
   func vpnProtocol(completion: @escaping (NEVPNProtocol?) -> Void)

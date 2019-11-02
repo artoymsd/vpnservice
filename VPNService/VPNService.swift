@@ -63,7 +63,7 @@ public final class VPNService: IVPNService {
     }
   }
   
-  public func disconnect() {
+  public func disconnect(completion: @escaping (Error?) -> Void) {
     guard vpnManager.connection.status != .disconnected, vpnManager.connection.status != .disconnecting else {return}
     self.vpnManager.isOnDemandEnabled = false
     
@@ -71,6 +71,7 @@ public final class VPNService: IVPNService {
       if error == nil {
         self.vpnManager.connection.stopVPNTunnel()
       }
+      completion(error)
     }
   }
   
