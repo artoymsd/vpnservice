@@ -18,4 +18,6 @@ public protocol IVPNService: class {
   
   func removeProfile(completion: @escaping (Error?) -> Void)
   func vpnProtocol(completion: @escaping (NEVPNProtocol?) -> Void)
+  
+  func vpnConnectedDate(completion: @escaping (Date?) -> Void)
 }

@@ -87,6 +87,12 @@ public final class VPNService: IVPNService {
     }
   }
   
+  public func vpnConnectedDate(completion: @escaping (Date?) -> Void) {
+    vpnManager.loadFromPreferences { (error) in
+      completion(self.vpnManager.connection.connectedDate)
+    }
+  }
+  
   @objc func vpnStatusDidChange(_ notification: Notification) {
     let vpnStatus = vpnManager.connection.status
     switch vpnStatus {
